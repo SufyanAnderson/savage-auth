@@ -7,6 +7,18 @@ module.exports = function(app, passport, db) {
         res.render('index.ejs');
     });
 
+    app.get('/team', function(req, res) {
+      res.render('party.ejs');
+  });
+
+  app.get('/match', function(req, res) {
+    res.render('profile.ejs');
+});
+
+app.get('/dashboard', function(req, res) {
+  res.render('dashboard.ejs');
+});
+
     // PROFILE SECTION =========================
     app.get('/profile', isLoggedIn, function(req, res) {
         db.collection('messages').find().toArray((err, result) => {
@@ -20,8 +32,10 @@ module.exports = function(app, passport, db) {
 
     // LOGOUT ==============================
     app.get('/logout', function(req, res) {
-        req.logout();
-        res.redirect('/');
+      req.logout(() => {
+            
+      });
+      res.redirect('/');
     });
 
 // message board routes ===============================================================
