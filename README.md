@@ -1,13 +1,3 @@
-## Installation
+This is not the correct savage auth its the other I may have accidently pushed leons repo! Link to the correct one https://github.com/SufyanAnderson/savageauth
 
-1. Clone repo
-2. run `npm install`
 
-## Usage
-
-1. run `node server.js`
-2. Navigate to `localhost:8080`
-
-## Credit
-
-Modified from Scotch.io's auth tutorial
